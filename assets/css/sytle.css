@@ -1,31 +1,51 @@
 body {
-    background: url("https://www.pixelstalk.net/wp-content/uploads/2016/05/Tiny-Death-Star-Wallpaper.png");
+    background: url("../images/deathstar.gif");
     background-size: 100%;
     color:white
 }
+
 img{
     height:175px;
     width:175px;
     float: left;
-    margin:25px;
-    border: 1px solid black;
+
 }
 
-userCharacter {
+#characters {
+    display: inline-block;
+}
+
+.character{
+    float:left;
+    text-align: center;
+    align-content: center;
+    display: block;
+    width:175px;
+    margin:15px
+}
+
+.yourCharacter,.currentEnemy{
+    clear:all;
+    text-align: center;
+    display:block;
+    margin:10px auto
+}
+
+.characterName, .characterHealth{
+    color:#ffd700;
+    width:175px;
+    text-align: center;
+    align-content: center;
+}
+
+#lightSabers {
+    margin-left:-120px;
     height:175px;
     width:175px;
-    float: left;
-    margin:25px;
-    border: 1px solid black;
-    background: green
-
+    background: none
 }
 
-enemies {
-    height:175px;
-    width:175px;
-    float: left;
-    margin:25px;
-    border: 1px solid black;
-    background:red
+#remainingEnemies{
+    display:inline-flex;
 }
+

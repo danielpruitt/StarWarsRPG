@@ -20,14 +20,14 @@ $(document).ready(function() {
         name: "Darth Maul",
         hp: 160,
         ap:18,
-        cap:20,
+        cap:18,
         image: "<img src='http://pixelartmaker.com/art/5d2906110ca1a02.png'>"
     };
 
     var palpatine = {
         name: "Palpatine",
         hp: 100,
-        ap:120,
+        ap:12,
         cap:12,
         image: "<img src='http://pixelartmaker.com/art/2c453e686520266.png'>"
     };
@@ -76,10 +76,9 @@ $(document).ready(function() {
             else if (arg.length <= 3) {
                 $("#remainingEnemies").empty()
 
-                character = [];
 
                 characters = [];
-                $("#remainingEnemies").append("<div class = 'title'> Remaining Enemies</div>")
+                $("#remainingEnemies").append("<h2 id='remainingEnemies'></h2>")
                 for (var i = 0; i < arg.length; i++){
                     for (var i = 0; i < arg.length; i++){
                         var chosenCharacter = $("<div id=" +arg[i].name+">");
@@ -161,7 +160,7 @@ $(document).ready(function() {
                 enemyAttack= parseInt(currentEnemy.attr("data-attack"));
                 enemyHealth= parseInt(currentEnemy.attr('data-health'));
 
-                console.log('is there an opponent' + opponent)
+                console.log('is there an opponent ' + opponent)
 
                 $("#lightSabers").on("click", function(){
                     if (opponent) {
@@ -217,9 +216,10 @@ $(document).ready(function() {
                 console.log('is the opponent' + opponent);
 
                 $("#currentEnemy").empty();
-
-                if(characters.length === 0) {
-                    alert("The force is strong with you, you have defeated all those worthy!")
+                
+                if (characters.length===0) {
+                    alert("The force is strong with you. You will rule the galaxy!");
+                    $("#lightSabers").empty();
                     restartGame();
 
                 }
