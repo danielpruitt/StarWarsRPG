@@ -2,8 +2,8 @@ $(document).ready(function() {
     //character objects
     var luke = {
         name: "Luke Skywalker",
-        hp: 115,
-        ap:10,
+        hp: 125,
+        ap:15,
         cap:10,
         image: "<img src='http://pixelartmaker.com/art/f266b506340121a.png'>"
     };
@@ -11,22 +11,22 @@ $(document).ready(function() {
     var obiwan = {
         name: "Obi Wan Kenobi",
         hp: 130,
-        ap:12,
+        ap:13,
         cap:15,
         image: "<img src='http://pixelartmaker.com/art/530d3e83a77ae2e.png'>"
     };
 
     var maul = {
         name: "Darth Maul",
-        hp: 160,
+        hp: 140,
         ap:18,
-        cap:18,
+        cap:15,
         image: "<img src='http://pixelartmaker.com/art/5d2906110ca1a02.png'>"
     };
 
     var palpatine = {
         name: "Palpatine",
-        hp: 100,
+        hp: 115,
         ap:12,
         cap:12,
         image: "<img src='http://pixelartmaker.com/art/2c453e686520266.png'>"
@@ -75,12 +75,9 @@ $(document).ready(function() {
 
             else if (arg.length <= 3) {
                 $("#remainingEnemies").empty()
-
-
                 characters = [];
                 $("#remainingEnemies").append("<h2 id='remainingEnemies'></h2>")
-                for (var i = 0; i < arg.length; i++){
-                    for (var i = 0; i < arg.length; i++){
+                    for (var i = 0; i < arg.length; i++) {
                         var chosenCharacter = $("<div id=" +arg[i].name+">");
                         chosenCharacter.append("<div class='characterName'>" + arg[i].name);
                         chosenCharacter.append(arg[i].image);
@@ -100,9 +97,9 @@ $(document).ready(function() {
 
                 } //end of else if for loop
 
-            } // end of else if 
+            } // function end 
 
-        } //end of createCharacter
+     //end of createCharacter
 
 
         //PICKING A CHARACTER 
@@ -123,6 +120,7 @@ $(document).ready(function() {
                 $("#remainingEnemies").append("<div class='title'> Pick your enemy</div>");
 
                 var remove = characters.indexOf(yourCharacter.attr("data-name"));
+
                 characterObjects.splice(remove,1);
 
                 createCharacter(characterObjects);
@@ -151,8 +149,11 @@ $(document).ready(function() {
                 $("#currentEnemy").append(currentEnemy);
                 opponent = true;
 
-                var remove = characters.indexOf(currentEnemy.attr("data-name"));
-                characterObjects.splice(remove,1);
+                var removeEnemy = characters.indexOf(currentEnemy.attr("data-name"));
+
+                characterObjects.splice(removeEnemy, 1);
+
+                createCharacter(characterObjects);
 
                 enemyAttack = 0;
                 console.log(enemyAttack)
@@ -174,7 +175,7 @@ $(document).ready(function() {
             });
 
 
-        }//end of pickYourOpponent function
+        };//end of pickYourOpponent function
 
         //fight
 
@@ -209,22 +210,28 @@ $(document).ready(function() {
                 },300);
             });
 
+            var defeated = 0;
             if(enemyHealth <=0 && yourHp > 0) {
+                defeated++; 
                 opponent = false;
+                
+                console.log(defeated)
+                
                 yourHp = yourHp-enemyAttack;
                 console.log("defeated" + currentEnemy.attr("data-name'"));
                 console.log('is the opponent' + opponent);
-
-                $("#currentEnemy").empty();
                 
-                if (characters.length===0) {
+                $("#currentEnemy").empty();
+                console.log(characterObjects)
+                if (characters.length === 0 ) {
                     alert("The force is strong with you. You will rule the galaxy!");
                     $("#lightSabers").empty();
                     restartGame();
 
                 }
-                else {
+                else{
                     pickYourOpponent();
+                    
                 };
             }
             else if (yourHp <= 0) {
@@ -252,7 +259,7 @@ $(document).ready(function() {
 
 
 
-}) // end of on load
+}); // end of on load
 
 
 

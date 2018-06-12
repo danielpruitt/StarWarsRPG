@@ -3,7 +3,11 @@ body {
     background-size: 100%;
     color:white
 }
-
+h1, div, h2 {
+    font-family: 'Bungee Inline', cursive;
+    color:#bf1830;
+    text-shadow: 1px 1px #ffd3d2
+}
 img{
     height:175px;
     width:175px;
