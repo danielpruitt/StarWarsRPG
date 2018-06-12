@@ -12,15 +12,15 @@ $(document).ready(function() {
         name: "Obi Wan Kenobi",
         hp: 130,
         ap:13,
-        cap:15,
+        cap:12,
         image: "<img src='http://pixelartmaker.com/art/530d3e83a77ae2e.png'>"
     };
 
     var maul = {
         name: "Darth Maul",
         hp: 140,
-        ap:18,
-        cap:15,
+        ap:11,
+        cap:10,
         image: "<img src='http://pixelartmaker.com/art/5d2906110ca1a02.png'>"
     };
 
@@ -65,6 +65,7 @@ $(document).ready(function() {
                         chosenCharacter.attr("data-name", arg[i].name);
                         chosenCharacter.attr("data-attack", arg[i].ap);
                         chosenCharacter.attr("data-health", arg[i].hp);
+                        chosenCharacter.attr("data-cap",arg[i].cap);
                         chosenCharacter.attr("class","character col-md-3");
 
                         characters.push(arg[i].name);
@@ -85,6 +86,7 @@ $(document).ready(function() {
                         chosenCharacter.attr("data-name", arg[i].name);
                         chosenCharacter.attr("data-attack", arg[i].ap);
                         chosenCharacter.attr("data-health", arg[i].hp);
+                        chosenCharacter.attr("data-cap",arg[i].cap);
                         chosenCharacter.attr("class","enemy");
 
                         characters.push(arg[i].name);
@@ -158,7 +160,7 @@ $(document).ready(function() {
                 enemyAttack = 0;
                 console.log(enemyAttack)
 
-                enemyAttack= parseInt(currentEnemy.attr("data-attack"));
+                enemyAttack= parseInt(currentEnemy.attr("data-cap"));
                 enemyHealth= parseInt(currentEnemy.attr('data-health'));
 
                 console.log('is there an opponent ' + opponent)
@@ -186,7 +188,7 @@ $(document).ready(function() {
 
             enemyHealth= enemyHealth-compoundAttack;
             yourHp= yourHp-enemyAttack
-            console.log("current enemy attack" + enemyAttack)
+            console.log("current enemy attack " + enemyAttack)
             console.log("enemy health" + enemyHealth);
             console.log("user health" + yourHp);
 
