@@ -267,15 +267,15 @@ $(document).ready(function() {
 
 
 
-//Pseudocode
-//create object to contain characters and stats 
-//create function for gameplay, that way when there is a win or loss it can be restarted, look at Crystal Collector
-//create div to load characters into characters area 
-//on click- character clicked on will now move to userCharacter, others will move to enemies
-//on click- user decides which character to fight
-//attack button- on click uses AP +5 to increase attack and subtract HP from enemy, automatically use enemy CAP to take health
-//if statement - if enemy HP <=0, remove character card and onclick new enemy, else if userCharacter HP <=0, lose
-//repeat for all characters
-//if statement- if no enemy remains, trigger a win 
+// Pseudocode
+// create object to contain characters and stats 
+// create function for gameplay, that way when there is a win or loss it can be restarted, look at Crystal Collector
+// create div to load characters into characters area 
+// on click- character clicked on will now move to userCharacter, others will move to enemies
+// on click- user decides which character to fight
+// attack button- on click uses AP +5 to increase attack and subtract HP from enemy, automatically use enemy CAP to take health
+// if statement - if enemy HP <=0, remove character card and onclick new enemy, else if userCharacter HP <=0, lose
+// repeat for all characters
+// if statement- if no enemy remains, trigger a win 
 
-//put character images in <div> and append to html, use css class to make background and <p> tags for name and HP
+// put character images in <div> and append to html, use css class to make background and <p> tags for name and HP
