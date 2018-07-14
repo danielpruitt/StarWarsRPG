@@ -1,4 +1,13 @@
-Pseudocode
+#Star Wars RPG
+
+https://danielpruitt.github.io/StarWarsRPG/
+
+
+This game is played by clicking any of the four characters to chose as you player character. The remaining characters are moved to an opponent area, upon clicking they become your opponent. Once an opponent is click they move to a new area in line with you player character, by clicking the lightsabers you make an attack an the NPC has a counter attack to inflict damage on the player character. If the player loses all HP the game is over if there are still remaining enemies. If the player defeats all enemies(defeating an enemy and clicking a new enemy will bring forth another opponent) then the player wins and the game is over.
+
+
+
+//Pseudocode//
 create object to contain characters and stats 
 create function for gameplay, that way when there is a win or loss it can be restarted, look at Crystal Collector
 create div to load characters into characters area 
@@ -10,6 +19,3 @@ repeat for all characters
 if statement- if no enemy remains, trigger a win 
 
 put character images in <div> and append to html, use css class to make background and <p> tags for name and HP
-
-
-This game is played by clicking any of the four characters to chose as you player character. The remaining characters are moved to an opponent area, upon clicking they become your opponent. Once an opponent is click they move to a new area in line with you player character, by clicking the lightsabers you make an attack an the NPC has a counter attack to inflict damage on the player character. If the player loses all HP the game is over if there are still remaining enemies. If the player defeats all enemies(defeating an enemy and clicking a new enemy will bring forth another opponent) then the player wins and the game is over.

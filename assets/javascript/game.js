@@ -54,7 +54,7 @@ $(document).ready(function() {
         pickCharacter();
         pickYourOpponent();
     
-     // character creation
+    // character creation
         function createCharacter(arg) {
             if (arg.length===4) {
                     for (var i = 0; i < arg.length; i++){
@@ -101,7 +101,7 @@ $(document).ready(function() {
 
             } // function end 
 
-     //end of createCharacter
+    //end of createCharacter
 
 
         //PICKING A CHARACTER 
@@ -191,6 +191,7 @@ $(document).ready(function() {
             console.log("current enemy attack " + enemyAttack)
             console.log("enemy health" + enemyHealth);
             console.log("user health" + yourHp);
+        
 
             $(".currentEnemy > .characterHealth").html(enemyHealth).animate({
                 fontSize: 60,
